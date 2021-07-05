@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:indaband/components/constants.dart';
 
 class TextWidget extends StatelessWidget {
   final String title;
@@ -18,54 +17,6 @@ class TextWidget extends StatelessWidget {
         title,
         style: textStyle,
       ),
-    );
-  }
-}
-
-class TextTitle extends StatelessWidget {
-  final String title;
-  const TextTitle({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: textTitle,
-    );
-  }
-}
-
-class TextCategories extends StatelessWidget {
-  final String title;
-  const TextCategories({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: textCategories,
-    );
-  }
-}
-
-class TextAlbums extends StatelessWidget {
-  final String title;
-  const TextAlbums({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: textAlbums,
     );
   }
 }

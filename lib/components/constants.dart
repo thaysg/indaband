@@ -14,15 +14,38 @@ final primaryColor = Color(0xFF22326B);
 final textTitle = TextStyle(
   fontWeight: FontWeight.w700,
   fontSize: 34,
-  fontFamily: 'Roboto',
+  fontFamily: 'Roboto ',
 );
 
 final textCategories = TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 24,
-  fontFamily: 'Roboto',
+  fontFamily: 'Roboto ',
 );
 
-final textAlbums = TextStyle(
+final textSpanTitle = TextStyle(
   fontSize: 14,
+  fontWeight: FontWeight.w700,
+  fontFamily: 'Robot ',
+);
+
+final textSpanSubtitle = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  fontFamily: 'Robot',
+  color: Colors.white.withOpacity(.87),
+);
+
+final bandTitle = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  fontFamily: 'Robot',
+  color: Colors.white.withOpacity(.60),
+);
+
+final timeStyle = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  fontFamily: 'Robot',
+  color: Colors.white.withOpacity(.60),
 );
