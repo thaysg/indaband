@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:indaband/home_screen/components/image_widget.dart';
-import 'package:indaband/player_screen/player_screen.dart';
 
 class ListAlbums extends StatelessWidget {
   const ListAlbums({Key? key}) : super(key: key);

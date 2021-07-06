@@ -10,6 +10,9 @@ class ButtonsMusic extends StatelessWidget {
   final double sizeRewind;
   final double sizePlay;
   final double sizeForward;
+  final Color backColor;
+  final Color playColor;
+  final Color forwardColor;
   const ButtonsMusic({
     Key? key,
     required this.onTapRewind,
@@ -21,6 +24,9 @@ class ButtonsMusic extends StatelessWidget {
     required this.sizeRewind,
     required this.sizePlay,
     required this.sizeForward,
+    required this.backColor,
+    required this.playColor,
+    required this.forwardColor,
   }) : super(key: key);
 
   @override
@@ -30,12 +36,13 @@ class ButtonsMusic extends StatelessWidget {
       children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(top: 32),
+            padding: const EdgeInsets.only(top: 24),
             child: IconButton(
               onPressed: onTapRewind,
               icon: Icon(
                 iconRewind,
                 size: sizeRewind,
+                color: backColor,
               ),
             ),
           ),
@@ -46,17 +53,19 @@ class ButtonsMusic extends StatelessWidget {
             icon: Icon(
               iconPlay,
               size: sizePlay,
+              color: playColor,
             ),
           ),
         ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(top: 32),
+            padding: const EdgeInsets.only(top: 24),
             child: IconButton(
               onPressed: onTapForward,
               icon: Icon(
                 iconForward,
                 size: sizeForward,
+                color: forwardColor,
               ),
             ),
           ),

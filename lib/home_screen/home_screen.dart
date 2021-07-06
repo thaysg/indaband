@@ -1,8 +1,6 @@
-import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:indaband/components/body.dart';
 import 'package:indaband/components/constants.dart';
-import 'package:indaband/home_screen/components/list_albums.dart';
 import 'package:indaband/home_screen/components/most_played_widget.dart';
 import 'package:indaband/home_screen/components/row_album.dart';
 import 'package:indaband/home_screen/components/search_widget.dart';
@@ -37,8 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final transitionType = ContainerTransitionType.fade;
-
+    FocusNode _focusNode = new FocusNode();
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(),
@@ -56,7 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: 'Discover',
                 textStyle: textTitle,
               ),
-              SearchWidget(),
+              SearchWidget(
+                focusNode: _focusNode,
+              ),
               //ListAlbums(),
               SizedBox(
                 height: 230,
@@ -96,27 +95,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   },
                                 ),
                               );
-                              /* Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => PlayerScreen(
-                                    questions: e.questions,
-                                  ),
-                                ),
-                              );
-                              print('object'); */
-                              /* OpenContainer(
-                                transitionType: transitionType,
-                                transitionDuration: Duration(seconds: 3),
-                                openBuilder: (context, _) => PlayerScreen(
-                                  questions: e.questions,
-                                ),
-                                closedBuilder:
-                                    (context, VoidCallback openContainer) =>
-                                        PlayerScreen(
-                                  questions: e.questions,
-                                ),
-                              ); */
                             },
                             picture: e.image,
                             subTitle: e.subTitle,

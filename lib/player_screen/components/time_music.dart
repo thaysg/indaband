@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:indaband/components/constants.dart';
 
 class TimeMusic extends StatelessWidget {
-  const TimeMusic({Key? key}) : super(key: key);
+  final String initialValue;
+  final String finalValue;
+  const TimeMusic({
+    Key? key,
+    required this.initialValue,
+    required this.finalValue,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +16,11 @@ class TimeMusic extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          '0:00',
+          initialValue,
           style: timeStyle,
         ),
         Text(
-          '3:50',
+          finalValue,
           style: timeStyle,
         ),
       ],

@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:indaband/models/player_model.dart';
-import 'package:indaband/models/row_album_model.dart';
 
 class HomeRepository {
   Future<List<QuizModel>> getQuizzes() async {

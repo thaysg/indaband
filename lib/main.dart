@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:indaband/home_screen/home_screen.dart';
 
 void main() {
+  SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp],
+  ).then((_) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    WidgetsFlutterBinding.ensureInitialized();
+  });
   runApp(MyApp());
 }
 

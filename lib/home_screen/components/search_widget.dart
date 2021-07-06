@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class SearchWidget extends StatelessWidget {
-  const SearchWidget({Key? key}) : super(key: key);
+  final FocusNode focusNode;
+  const SearchWidget({
+    Key? key,
+    required this.focusNode,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,6 +13,7 @@ class SearchWidget extends StatelessWidget {
       height: 48,
       width: 327,
       child: TextField(
+        focusNode: focusNode,
         textAlign: TextAlign.center,
         decoration: InputDecoration(
           prefixIcon: Icon(Icons.search),

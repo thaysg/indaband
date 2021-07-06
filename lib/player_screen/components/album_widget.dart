@@ -31,8 +31,8 @@ class _AlbumWidgetState extends State<AlbumWidget> {
             children: [
               Image.asset(
                 widget.question.title,
-                width: 343,
-                height: 368,
+                width: MediaQuery.of(context).size.width * 343,
+                height: MediaQuery.of(context).size.height * .368,
                 fit: BoxFit.cover,
               ),
               IconButton(

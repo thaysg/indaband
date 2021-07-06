@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 
 class MusicSlider extends StatelessWidget {
   final double sliderValue;
+  final int? min;
+  final int? max;
   final ValueChanged onChange;
   const MusicSlider({
     Key? key,
     required this.sliderValue,
     required this.onChange,
+    this.min,
+    this.max,
   }) : super(key: key);
 
   @override
